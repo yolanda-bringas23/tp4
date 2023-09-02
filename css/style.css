@@ -12,6 +12,15 @@ h1 {
     padding: 20px;
 }
 
+.gif-card {
+    display: grid;
+    max-width: 500px;
+    max-height: 380px;
+    
+    float: left;
+    gap: 5px;
+}
+
 .resultados {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

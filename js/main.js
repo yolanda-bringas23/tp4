@@ -3,6 +3,7 @@ const termino = document.querySelector(".termino");
 const buscador = document.querySelector(".buscador");
 const resultados = document.querySelector(".resultados");
 
+
 buscador.addEventListener("click", () => {
     resultados.innerHTML = "";
     const url = `https://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${termino.value}&limit=9`;
@@ -15,8 +16,11 @@ buscador.addEventListener("click", () => {
             response.data.forEach(element => {
                 const urlImg = element.images.original.url;
                 const img = document.createElement("img");
+                const div = document.createElement("div");
+                div.className = "gif-card";
                 img.src = urlImg;
-                resultados.appendChild(img); 
+                resultados.appendChild(div);
+                div.appendChild(img); 
                 
             });
                 
